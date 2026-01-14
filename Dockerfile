@@ -9,6 +9,10 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
+
+ARG REACT_APP_CLIENT_SECRET
+ENV REACT_APP_CLIENT_SECRET=$REACT_APP_CLIENT_SECRET
+
 RUN pnpm run build
 
 # Stage 2: Production

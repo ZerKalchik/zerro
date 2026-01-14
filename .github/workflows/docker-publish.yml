@@ -43,3 +43,4 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             REACT_APP_CLIENT_SECRET=${{ secrets.REACT_APP_CLIENT_SECRET }}
+            REACT_APP_CLIENT_ID=${{ secrets.REACT_APP_CLIENT_ID }}
